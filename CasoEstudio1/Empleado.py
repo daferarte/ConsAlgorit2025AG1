@@ -112,12 +112,13 @@ class Empleado:
     def DarFechaIngreso(self):
         # Aqui va el codigo
         # forma 1
-        fechaIngreso = f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
-        return fechaIngreso
+        # fechaIngreso = f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
+        # return fechaIngreso
     
-        # forma 2
-        return f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
-    
+        # # forma 2
+        # return f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
+        # forma 3
+        return self.fechaIngreso.DarFecha()
     
     __method__ = "DarFechaNacimiento"
     __params__ = "Ninguno"
@@ -126,8 +127,10 @@ class Empleado:
     def DarFechaNacimiento(self):
         # Aqui va el codigo
         # forma 1
-        fechaNacimiento = f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
-        return fechaNacimiento
+        # fechaNacimiento = f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
+        # return fechaNacimiento
     
-        # forma 2
-        return f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
+        # # forma 2
+        # return f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
+        # forma 3
+        return self.fechaNacimiento.DarFecha()

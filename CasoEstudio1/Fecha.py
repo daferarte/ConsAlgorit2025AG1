@@ -68,3 +68,10 @@ class Fecha:
     def CambiarAnio(self, nuevoAnio):
         # aqui va mi codigo
         self.anio = nuevoAnio
+        
+    __method__ = "DarFecha"
+    __params__ = "Ninguno"
+    __returns__ = "Fecha"
+    __descriptions__ = "Metodo que retorna la fecha"
+    def DarFecha(self):
+        return f'{self.DarDia()}/{self.DarMes()}/{self.DarAnio()}'
