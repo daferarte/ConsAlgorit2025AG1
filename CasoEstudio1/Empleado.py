@@ -86,5 +86,48 @@ class Empleado:
     def DarDiaIngreso(self):
         # aqui va mi codigo
         return self.fechaIngreso.DarDia()
-            
-            
+    
+    __method__ = "CambiarFechaIngreso"
+    __params__ = "dia, mes, anio"
+    __returns__ = "ninguno"
+    __descriptions__ = "Metodo que permite cambiar la fecha de ingreso a la empresa del empleado"
+    def CambiarFechaIngreso(self, dia, mes, anio):
+        self.fechaIngreso.CambiarDia(dia)
+        self.fechaIngreso.CambiarMes(mes)
+        self.fechaIngreso.CambiarAnio(anio)
+        
+    __method__ = "CambiarFechaNacimiento"
+    __params__ = "dia, mes, anio"
+    __returns__ = "ninguno"
+    __descriptions__ = "Metodo que permite cambiar la fecha de nacimiento del empleado"
+    def CambiarFechaNacimiento(self, dia, mes, anio):
+        self.fechaNacimiento.CambiarDia(dia)
+        self.fechaNacimiento.CambiarMes(mes)
+        self.fechaNacimiento.CambiarAnio(anio)
+    
+    __method__ = "DarFechaIngreso"
+    __params__ = "Ninguno"
+    __returns__ = "fechaIngreso"
+    __descriptions__ = "Metodo que retorna la fecha de ingreso a la empresa del empleado"
+    def DarFechaIngreso(self):
+        # Aqui va el codigo
+        # forma 1
+        fechaIngreso = f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
+        return fechaIngreso
+    
+        # forma 2
+        return f'{self.fechaIngreso.DarDia()}/{self.fechaIngreso.DarMes()}/{self.fechaIngreso.DarAnio()}'
+    
+    
+    __method__ = "DarFechaNacimiento"
+    __params__ = "Ninguno"
+    __returns__ = "fechaNacimiento"
+    __descriptions__ = "Metodo que retorna la fecha de nacimiento del empleado"
+    def DarFechaNacimiento(self):
+        # Aqui va el codigo
+        # forma 1
+        fechaNacimiento = f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
+        return fechaNacimiento
+    
+        # forma 2
+        return f'{self.fechaNacimiento.DarDia()}/{self.fechaNacimiento.DarMes()}/{self.fechaNacimiento.DarAnio()}'
