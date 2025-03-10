@@ -12,3 +12,5 @@ empleado1.CambiarSalario(150000)
 print(f'El nuevo salario del empleado es: {empleado1.DarSalario()}')
 print(f'El empleado debe pagar impuestos con valor de: {empleado1.CalcularImpuestos()} para el salario anual de: {empleado1.CalcularSalarioAnual()}')
 
+empleado1.CambiarFechaIngreso(2,5,2015)
+print(f'La fecha de ingreso del empleado es: {empleado1.DarFechaIngreso()}')
