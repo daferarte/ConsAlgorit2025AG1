@@ -10,7 +10,7 @@ class LineaTelefonica:
     numeroMinutos=0
     
     # Costo total de las llamadas
-    costoLlamadas=0
+    costoLlamadas=0.0
     
     '''----------------------------------------------------------------
     # Metodos
