@@ -23,12 +23,29 @@ class Producto:
         ###################################################
         # Atributos
         ###################################################
-        self.nombre:str=nombre
-        self.tipo:Tipo=tipo
-        self.valorUnitario:float=valorUnitario
-        self.cantidadBodega:int=cantidadBodega
-        self.subsidio:bool=subsidio
-        self.calidad:str=calidad
-        self.cantidadMinima:int=cantidadMinima
+        self.__nombre:str=nombre
+        self.__tipo:Tipo=tipo
+        self.__valorUnitario:float=valorUnitario
+        self.__cantidadBodega:int=cantidadBodega
+        self.__subsidio:bool=subsidio
+        self.__calidad:str=calidad
+        self.__cantidadMinima:int=cantidadMinima
+        
+    __method__="DarNombre"
+    __params__="Ninguno"
+    __return__="Nombre"
+    __description__="Metodo que sirve para dar el nombre de el producto"
+    def DarNombre(self):
+        return self.__nombre
+    
+    __method__="CambiarNombre"
+    __params__="Nombre"
+    __return__="Nada"
+    __description__="Metodo que sirve para cambiar el nombre de el producto"
+    def CambiarNombre(self, nombre:str):
+        self.__nombre=nombre
+    
+    
+
         
         
