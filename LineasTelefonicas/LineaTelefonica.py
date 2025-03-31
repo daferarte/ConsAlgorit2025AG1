@@ -2,7 +2,6 @@ class LineaTelefonica:
     '''----------------------------------------------------------------
     # atributos
     ----------------------------------------------------------------'''
-    
     # Numero de llamadas realizadas
     numeroLlamadas=0
     
@@ -51,13 +50,14 @@ class LineaTelefonica:
     # :param pMinutos Número de minutos de la llamada. pMinutos >0.
     def agregarLlamadaLocal(self, pMinutos):
         
-        # Una llamada más
-        #self.numeroLlamadas = self.numeroLlamadas + 1
-        self.numeroLlamadas += 1
-        # Suma los minutos consumidos
-        self.numeroMinutos += pMinutos
-        # Suma el costo (costo por minuto: 35 pesos)
-        self.costoLlamadas += pMinutos * 35
+        if pMinutos > 0:
+            # Una llamada más
+            #self.numeroLlamadas = self.numeroLlamadas + 1
+            self.numeroLlamadas += 1
+            # Suma los minutos consumidos
+            self.numeroMinutos += pMinutos
+            # Suma el costo (costo por minuto: 35 pesos)
+            self.costoLlamadas += pMinutos * 35
 
     """
         Agrega una llamada de larga distancia a la línea telefónica.
