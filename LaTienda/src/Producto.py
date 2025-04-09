@@ -23,6 +23,15 @@ class Producto:
         ###################################################
         # Atributos
         ###################################################
+        # if not nombre:
+        #     return "el nombre no puede ser vacio"
+        # if valorUnitario<0:
+        #     return "el valor unitario debe ser mayor a 0"
+        
+        assert nombre, "el nombre no puede ser vacio"
+        assert tipo in Tipo, "no esta contemplado el tipo"
+        
+         
         self.__nombre:str=nombre
         self.__tipo:Tipo=tipo
         self.__valorUnitario:float=valorUnitario
@@ -44,6 +53,7 @@ class Producto:
     __return__="Nada"
     __description__="Metodo que sirve para cambiar el nombre del producto"
     def CambiarNombre(self, nombre:str):
+        assert nombre, 'El nombre no puede ser vacio'
         self.__nombre=nombre
         
     __method__="DarValorUnitario"
@@ -66,6 +76,9 @@ class Producto:
     __return__="Mensaje de resultado"
     __description__="Metodo que sirve para vender productos"
     def vender(self, cantidad:int):
+        # if cantidad <= 0:
+        #     return 'Ingresa una cantidad mayor a 0'
+        assert cantidad > 0, 'Ingresa una cantidad mayor a 0'
         # aqui va el codigo
         if cantidad <= self.__cantidadBodega: 
             self.__candidadUnidadesVendidas+=cantidad
