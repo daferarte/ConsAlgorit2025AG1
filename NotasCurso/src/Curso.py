@@ -94,3 +94,21 @@ class Curso:
         else:
             self.notas[indice] = self.notas[0] - valor
             
+    
+    def DarNotaMasRecurrente(self):
+        
+        notaMasRecurrente = 0
+        cantidadOcurrencias = 0
+        
+        for i in len(self.notas):
+            notaBuscada = self.notas[i]
+            contador = 0
+            for j in len(self.notas):
+                if self.notas[j] == notaBuscada:
+                    contador +=1
+            
+            if contador > cantidadOcurrencias:
+                notaMasRecurrente=notaBuscada
+                cantidadOcurrencias=contador
+        
+        return notaMasRecurrente
